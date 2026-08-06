@@ -61,7 +61,15 @@ The file then uses the IAPWS library (stands for International Agency Protection
 
 Next, it generates 1000 normal velocities and 1000 uniform diameters
 
-After this, we plug our values into the equation and make out re, pr, and Nu using our data for each data point in the array.
+After this, we plug our values into the equation and make out re, pr, and Nu, and h using our data for each data point in the array.
 
 then we output to the data.csv file
 
+I decided to use Coolprop because it can already do the vectorized math (whatever that means), instead of IAPWS library. Making that small change took prgram runtime from 25.0 seconds on average to 5.0 seconds on average
+
+## Making the machine learning algorithm
+
+Based on my understanding, a machine learning model is a function that takes in multiple inputs and predicts an output using a neural network. We are going to have 7 input parameters temperatures, density, specific_heat, dynamic_viscosity, 
+thermal_conductivity, diameters, velocities,
+
+I am avoiding using the reynolds, nusselt, and prandtl numbers to hopefully avoid the program overfitting to dividing the prandly by K/d, so that we can actually ask about things like changes to 
