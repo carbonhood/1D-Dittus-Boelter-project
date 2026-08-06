@@ -52,3 +52,16 @@ Specific Heat, Thermal conductivity, Dynamic Viscosity
 4. Solve for $h = \frac{\mathrm{Nu} \cdot k}{D}$.
 5. Plug $h$ into the exponential equation to find $T_{out}$.
 6. Calculate $Q$ and verify if the [[Heat Exchanger]] meets the design load.
+
+## Data Generation
+
+The data generation module works by first generating a normal distribution of water temperatures often seen in a nuclear reactor, assumed to be at 155 bar. 
+
+The file then uses the IAPWS library (stands for International Agency Protection of Water Streams or something like that idek) to generate values for density, specific heat, thermal conductivity, and dynamic viscosity at 1000 different temperature values
+
+Next, it generates 1000 normal velocities and 1000 uniform diameters
+
+After this, we plug our values into the equation and make out re, pr, and Nu using our data for each data point in the array.
+
+then we output to the data.csv file
+
