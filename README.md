@@ -72,4 +72,14 @@ I decided to use Coolprop because it can already do the vectorized math (whateve
 Based on my understanding, a machine learning model is a function that takes in multiple inputs and predicts an output using a neural network. We are going to have 7 input parameters temperatures, density, specific_heat, dynamic_viscosity, 
 thermal_conductivity, diameters, velocities,
 
-I am avoiding using the reynolds, nusselt, and prandtl numbers to hopefully avoid the program overfitting to dividing the prandly by K/d, so that we can actually ask about things like changes to 
+Then the function has weights that it applies to the inputs, and all of the nuerons, and it links the nuerons itself. 
+
+I am going to try using 2 hidden layers, the first with 64 nuerons, the second with 32, and the input layer with 7 inputs, and an output layer with 1 output (h)
+
+I am avoiding using the reynolds, nusselt, and prandtl numbers to hopefully avoid the program overfitting to dividing the prandtl by K/d, so that we can actually ask about things like changes to velocity, temperature, and diameter.
+
+To set up the nueral network, we for numpy load the data set from the csv file, and then we split the data into 80% train and 20% test. 
+
+I looked up online a lot of how to set up the neural network, but it seems to be pretty standardized across the web and it works so we roll with it.
+
+
