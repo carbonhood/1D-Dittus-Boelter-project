@@ -30,7 +30,8 @@ Therefore,
 
 H = $$ \mathrm{Nu} = 0.023 \cdot \mathrm{Re}^{0.8} \cdot \mathr{Pr}^{0.4} $$ / D * K
 
-
+Inputs to treat as fixed constants: Specific Heat, Thermal conductivity, Dynamic Viscosity
+Inputs to vary for data: Density, Diameter, Mean fluid velocity
 ##  Practical Real-World Workflow for an Engineer
 
 1. Calculate $\mathrm{Re}$ using $V_m$ and $D$.
