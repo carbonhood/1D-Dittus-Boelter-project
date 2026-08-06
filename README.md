@@ -16,13 +16,13 @@ Fluid Transport variables;
 
     Thermal Conductivity (K): measured in W/(m*K) How easily the fluid itself conducts heat. (watts per meter kelvin)
 
-    Dynamic Viscosity ($\mu) measured in kg/m*s. Measures the fluids viscosity
+    Dynamic Viscosity ($$\mu$$) measured in kg/m*s. Measures the fluids viscosity
 
     Specific heat capactiy (C) J/Kg*K. how much energy must be put in to heat up one kg of the fluid by one degree kelvin
 
 Flow and geometric variables
 
-    Fluid Density ($\rho$) Measured in Kg/m^3. Is a measure of how much mass is in each unit volume
+    Fluid Density ($$\rho$$) Measured in Kg/m^3. Is a measure of how much mass is in each unit volume
 
     mean fluid velocity (V) measured in m/s. The average speed of all the fluid traveling down the pipe.
 
@@ -39,7 +39,8 @@ $$ \mathrm{Nu} = \frac{h D}{k} $$
 
 Therefore, 
 
-H = $$ \mathrm{Nu} = 0.023 \cdot \mathrm{Re}^{0.8} \cdot \mathr{Pr}^{0.4} $$ / D * K
+H = $$ \mathrm{Nu} = 0.023 \cdot \mathrm{Re}^{0.8} \cdot \mathr{Pr}^{0.4} $$
+/D*K
 
 Inputs to treat as fixed constants: Specific Heat, Thermal conductivity, Dynamic Viscosity
 Inputs to vary for data: Density, Diameter, Mean fluid velocity
