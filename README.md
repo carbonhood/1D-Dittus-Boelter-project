@@ -39,8 +39,8 @@ $$ \mathrm{Nu} = \frac{h D}{k} $$
 
 Therefore, 
 
-H = $$ \mathrm{Nu} = 0.023 \cdot \mathrm{Re}^{0.8} \cdot \mathr{Pr}^{0.4} $$
-/D*K
+$$ H = \frac{\mathrm{Nu} \cdot K}{D} = \frac{0.023 \cdot \mathrm{Re}^{0.8} \cdot \mathrm{Pr}^{0.4} \cdot K}{D} $$
+
 
 Inputs to treat as fixed constants: Specific Heat, Thermal conductivity, Dynamic Viscosity
 Inputs to vary for data: Density, Diameter, Mean fluid velocity
