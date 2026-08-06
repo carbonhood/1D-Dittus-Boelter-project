@@ -33,9 +33,10 @@ def make_velocities():
     velocities = numpy.random.uniform(3.0, 16.0, 1000)
     return velocities
 
-def make_array(parameters, diameters, velocities):
-    array = numpy.array([parameters, diameters, velocities])
-    array = numpy.column_stack((parameters, diameters, velocities))
+def make_array(temperatures, parameters, diameters, velocities):
+    # columns: temperature, density, specific_heat, dynamic_viscosity,
+    # thermal_conductivity, diameter, velocity -> shape (1000, 7)
+    array = numpy.column_stack((temperatures, parameters, diameters, velocities))
     return array
 
 def generate_data(temperature_list, diameter_list, velocity_list):
@@ -49,5 +50,5 @@ if __name__ == "__main__":
     parameters = make_parameters(temperatures)
     diameters = make_diameters()
     velocities = make_velocities()
-    array = make_array(parameters, diameters, velocities)
+    array = make_array(temperatures, parameters, diameters, velocities)
     print(array.shape)
