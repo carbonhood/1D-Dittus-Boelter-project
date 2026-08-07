@@ -1,6 +1,5 @@
 from time import time
 import numpy as np
-from iapws import IAPWS97
 import CoolProp.CoolProp as CP
 #generate a normal distribution of temperatures
 # 583.15 K is 310 C, 10 K is the standard deviation

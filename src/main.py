@@ -9,7 +9,7 @@ if __name__ == "__main__":
         create_synthetic_dataset()
     else:
         print("Using existing dataset")
-        pass
+        
 
 
     Create_model = input("Do you want to create a new model? (y/n)")
@@ -18,16 +18,17 @@ if __name__ == "__main__":
     else:
         print("Using existing model")
         model, checkpoint = load_model()
-        pass
+        
     
+    while True:
+        Train_model = input("Do you want to train the model? (y/n)")
+        if Train_model == "y":
+            features_train_tensor, target_train_tensor, features_test_tensor, target_test_tensor = prepare_data()
+            train_model(model, features_train_tensor, target_train_tensor, checkpoint)
+            model, checkpoint = load_model()
+        elif Train_model == "n" or ValueError:
+            print("Skipping training")
+            break
 
-    Train_model = input("Do you want to train the model? (y/n)")
-    if Train_model == "y":
-        features_train_tensor, target_train_tensor, features_test_tensor, target_test_tensor = prepare_data()
-        train_model(model, features_train_tensor, target_train_tensor, checkpoint)
-    else:
-        print("Skipping training")
-        pass
-    
-    ## add in another input to either continue training, that loops over and over again until the user says no
+
     ## Then add another input to test the model against the test data
