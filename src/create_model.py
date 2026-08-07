@@ -46,6 +46,8 @@ def prepare_data():
         target_train_tensor,
         features_test_tensor,
         target_test_tensor,
+        feature_scaler,
+        target_scaler,
     )
 
 

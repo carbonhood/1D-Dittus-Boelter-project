@@ -42,7 +42,7 @@ def generate_data(density, specific_heat, dynamic_viscosity, thermal_conductivit
     # calculate the reynolds, prandtl, and nusselt numbers
     reynolds = (density * velocities * diameters) / dynamic_viscosity
     prandtl = (specific_heat * dynamic_viscosity) / thermal_conductivity
-    nusselt = 0.023 * (reynolds ** 0.8) * (prandtl ** 0.4)
+    nusselt = 0.023 * (reynolds ** 0.8) * (prandtl ** 0.3)
     #also need to calculate h using the nusselt number, is shown by nusselt * thermal_conductivity / diameter
     h = (nusselt * thermal_conductivity) / diameters
     print(f"Generated {number_of_data_points} reynolds, prandtl, nusselt, and h")
